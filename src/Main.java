@@ -109,6 +109,10 @@ public class Main {
             throw new Exception("Ошибка: некорректное римское число");
         }
 
+        if (number1 < 1 || number1 > 10 || number2 < 1 || number2 > 10) {
+            throw new Exception("Ошибка: калькулятор поддерживает числа от 1(I) до 10(X) включительно");
+        }
+
         Operation op;
         switch (expression[1]) {
             case "+" -> op = Operation.SUM;
