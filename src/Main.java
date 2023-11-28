@@ -106,7 +106,7 @@ public class Main {
             number1 = isRoman ? Roman.toInt(expression[0]) : Integer.parseInt(expression[0]);
             number2 = isRoman ? Roman.toInt(expression[2]) : Integer.parseInt(expression[2]);
         } catch (NumberFormatException e) {
-            throw new Exception("Ошибка: некорректное арабское число");
+            throw new Exception("Ошибка: некорректное римское число");
         }
 
         Operation op;
@@ -124,6 +124,7 @@ public class Main {
         } catch (ArithmeticException e) {
             throw new Exception("Ошибка: делить на ноль нельзя");
         }
+
         if (result < 1 && isRoman) {
             throw new Exception("Ошибка: в римской системе счисления нет 0 и отрицательных чисел");
         }
